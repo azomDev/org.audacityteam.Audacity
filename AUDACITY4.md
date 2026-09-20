@@ -66,3 +66,23 @@ Still required: clean builds of the final manifest on x86_64 and aarch64,
 interactive playback/recording/export, AUP4 save/reopen, and native plugin
 windows. Maintainers must also decide whether Audacity 4 belongs on stable,
 beta, or a separate package; Audacity 3 workflows are not all supported in 4.
+
+## Optional build without audio.com integration
+
+Audacity provides a build-time option to disable audio.com cloud integration.
+Add this entry under the audacity module's `config-opts` in the manifest:
+
+```yaml
+    config-opts:
+      - -DAU_BUILD_CLOUD_AUDIOCOM=OFF
+```
+
+Rebuild the app for it to take effect; this is not a runtime environment
+variable. The source uses this option to disable the cloud service and hide
+related account, cloud project/audio, and export-preference UI. Some File menu
+entries appear to be unconditional in this source snapshot, so the flag alone
+may leave cloud references visible. It does not disable every network feature.
+The default manifest retains cloud support.
+
+Local testing of this optional configuration is in progress; user confirmation
+of the resulting interface is still pending.
