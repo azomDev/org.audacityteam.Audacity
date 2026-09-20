@@ -1,3 +1,9 @@
+> [!WARNING]
+> **Experimental Audacity 4 update:** the packaging changes on this branch were
+> prepared by an LLM. They require human review and further
+> testing. See [AUDACITY4.md](AUDACITY4.md) for changes and validation limits.
+> The notes below describe the inherited Audacity 3 packaging.
+
 Flatpak notes
 =============
 

@@ -1,0 +1,9 @@
+Add LinuxAudio extensions to the VST3 provider used by Audacity 4.
+The provider does not consume VST3_PATH.
+
+--- a/au3/libraries/au3-vst3/VST3EffectsModule.cpp
++++ b/au3/libraries/au3-vst3/VST3EffectsModule.cpp
+@@ -242,2 +242,3 @@
+     pathList.push_back("/usr/local/lib/vst3/");
++    pathList.push_back("/app/extensions/Plugins/vst3/");
+ #endif

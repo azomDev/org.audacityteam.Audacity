@@ -1,0 +1,18 @@
+Use SDK zlib, expat and PCRE2 when building wxBase.
+The bundled zlib fails to compile with GCC 15.
+
+--- a/muse_deps/recipes/wxwidgets/spec.cmake
++++ b/muse_deps/recipes/wxwidgets/spec.cmake
+@@ -17,9 +17,9 @@
+     -DwxBUILD_COMPATIBILITY=3.0
+     -DwxBUILD_PRECOMP=OFF
+     -DwxUSE_WEBREQUEST=OFF
+-    -DwxUSE_ZLIB=builtin
+-    -DwxUSE_EXPAT=builtin
+-    -DwxUSE_REGEX=builtin
++    -DwxUSE_ZLIB=sys
++    -DwxUSE_EXPAT=sys
++    -DwxUSE_REGEX=sys
+     -DwxUSE_LIBLZMA=OFF
+     -DwxUSE_SECRETSTORE=OFF
+ )

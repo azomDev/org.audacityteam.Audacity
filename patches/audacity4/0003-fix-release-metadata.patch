@@ -1,0 +1,42 @@
+Correct stale beta metadata and identify the installed desktop launcher.
+Use an Audacity 4 screenshot from the upstream release website.
+
+--- a/buildscripts/packaging/Linux+BSD/org.audacityteam.Audacity.appdata.xml.in
++++ b/buildscripts/packaging/Linux+BSD/org.audacityteam.Audacity.appdata.xml.in
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<component type="desktop">
+-  <developer_name>Muse Group</developer_name>
++<component type="desktop-application">
++  <developer id="org.audacityteam"><name>Muse Group</name></developer>
+   <id>org.audacityteam.Audacity</id>
+-  <launchable type="desktop-id">audacity.desktop</launchable>
++  <launchable type="desktop-id">org.audacityteam.Audacity.desktop</launchable>
+   <project_license>GPL-3.0-only</project_license>
+   <metadata_license>CC0-1.0</metadata_license>
+   <name>Audacity</name>
+@@ -30,14 +30,18 @@
+   <url type="faq">https://manual.audacityteam.org/man/faq.html</url>
+   <url type="help">https://support.audacityteam.org/</url>
+   <url type="translate">https://support.audacityteam.org/community/contributing/translating</url>
++  <screenshots>
++    <screenshot type="default">
++      <image>https://www.audacityteam.org/_astro/Project_page.D35Jg12g_24ld71.webp</image>
++      <caption>Audacity 4 project browser</caption>
++    </screenshot>
++  </screenshots>
+   <releases>
+-    <release version="4.0.0 beta" date="2024-09-12">
+-     <description>
+-        <p>New Audacity 4.0</p>
+-        <p>Watch the release video or read the changelog to learn more.</p>
++    <release version="4.0.0" date="2026-09-03">
++      <description>
++        <p>New Qt interface, clip editing workflows and AUP4 project format.</p>
+       </description>
+-      <url>https://support.audacityteam.org/additional-resources/changelog/audacity-3.6</url>
+-      <url>https://www.audacityteam.org/3.6.0-video</url>
++      <url>https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0</url>
+     </release>
+   </releases>
+ </component>
